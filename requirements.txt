@@ -1,0 +1,5 @@
+boto3
+google-cloud-storage
+google-cloud-aiplatform
+azure-storage-blob
+
