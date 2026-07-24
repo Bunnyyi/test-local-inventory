@@ -1,0 +1,9 @@
+apiVersion: storage.azure.com/v1api20230101
+kind: StorageAccount
+metadata:
+  name: repello-iac-aso-storage
+spec:
+  azureName: repello-iac-aso-storage
+  location: eastus
+  owner:
+    name: inventory-test-resource-group

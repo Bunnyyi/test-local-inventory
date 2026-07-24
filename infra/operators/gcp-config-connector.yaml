@@ -1,0 +1,8 @@
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageBucket
+metadata:
+  name: repello-iac-config-connector-bucket
+  annotations:
+    cnrm.cloud.google.com/project-id: forward-dream-501807-j3
+spec:
+  location: US

@@ -1,0 +1,14 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "Repello Inventory SAM JSON test",
+  "Resources": {
+    "InventoryApi": {
+      "Type": "AWS::Serverless::Api",
+      "Properties": {
+        "Name": "repello-iac-sam-json-api",
+        "StageName": "test"
+      }
+    }
+  }
+}

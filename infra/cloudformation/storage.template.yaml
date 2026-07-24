@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Repello Inventory CloudFormation YAML test
+Resources:
+  InventoryBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: repello-iac-cloudformation-yaml-bucket

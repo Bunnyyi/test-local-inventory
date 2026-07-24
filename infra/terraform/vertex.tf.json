@@ -1,0 +1,11 @@
+{
+  "resource": {
+    "google_vertex_ai_endpoint": {
+      "inventory_json_endpoint": {
+        "display_name": "repello-iac-terraform-json-endpoint",
+        "project": "forward-dream-501807-j3",
+        "region": "us-central1"
+      }
+    }
+  }
+}

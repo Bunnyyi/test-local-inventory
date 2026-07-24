@@ -1,0 +1,12 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Repello Inventory CloudFormation JSON test",
+  "Resources": {
+    "InventoryModel": {
+      "Type": "AWS::SageMaker::Model",
+      "Properties": {
+        "ModelName": "repello-iac-cloudformation-json-model"
+      }
+    }
+  }
+}

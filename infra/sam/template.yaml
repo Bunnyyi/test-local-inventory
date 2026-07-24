@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Repello Inventory SAM YAML test
+Resources:
+  InventoryFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: repello-iac-sam-yaml-function
+      Runtime: python3.12
+      Handler: app.handler
+      InlineCode: |
+        def handler(event, context):
+            return {"statusCode": 200}
