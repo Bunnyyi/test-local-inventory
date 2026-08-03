@@ -27,13 +27,13 @@ resource "azurerm_cognitive_deployment" "inference" {
   }
 
   sku {
-    name     = "Standard"
+    name     = "GlobalStandard"
     capacity = 1
   }
 }
 
 resource "aws_sagemaker_model" "inference_proxy" {
-  name               = "repello-multicloud-model"
+  name               = "repello-sagemaker-model-test"
   execution_role_arn = var.aws_sagemaker_execution_role_arn
 
   primary_container {

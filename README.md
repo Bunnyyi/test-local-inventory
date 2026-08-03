@@ -30,8 +30,8 @@ When matching AWS, Azure, and GCP connectors are scanned, the Inventory graph sh
 show:
 
 ```text
-repello-multicloud-model -> repello-multicloud-openai-deployment
-repello-multicloud-model -> repello-gcp-inventory-test-forward-dream-501807-j3
+repello-sagemaker-model-test -> repello-multicloud-openai-deployment
+repello-sagemaker-model-test -> repello-gcp-inventory-test-forward-dream-501807-j3
 ```
 
 Both relationships come from explicit Terraform references. Merely declaring resources
