@@ -12,13 +12,17 @@ variable "aws_sagemaker_image_uri" {
   type = string
 }
 
-variable "azure_cognitive_account_id" {
-  type = string
+resource "azurerm_cognitive_account" "openai" {
+  name                = "repello-inventory-openai-14244"
+  resource_group_name = "repello-inventory-test-rg"
+  location            = "eastus"
+  kind                = "OpenAI"
+  sku_name            = "S0"
 }
 
 resource "azurerm_cognitive_deployment" "inference" {
   name                 = "repello-multicloud-openai-deployment"
-  cognitive_account_id = var.azure_cognitive_account_id
+  cognitive_account_id = azurerm_cognitive_account.openai.id
 
   model {
     format  = "OpenAI"

@@ -19,6 +19,7 @@ credentials.
 - GCP Config Connector resources
 - AWS ACK resources
 - Azure Service Operator resources
+- An Azure OpenAI deployment attached to an Azure Cognitive Services account
 - An AWS SageMaker model with explicit Terraform dependencies on an Azure OpenAI
   deployment and a GCP bucket
 
@@ -30,9 +31,18 @@ When matching AWS, Azure, and GCP connectors are scanned, the Inventory graph sh
 show:
 
 ```text
+repello-inventory-openai-14244 -> repello-multicloud-openai-deployment
 repello-sagemaker-model-test -> repello-multicloud-openai-deployment
 repello-sagemaker-model-test -> repello-gcp-inventory-test-forward-dream-501807-j3
 ```
 
-Both relationships come from explicit Terraform references. Merely declaring resources
-from several providers in the same repository does not create a dependency.
+The source explicitly declares all three dependencies. The Azure connector also reports
+the first relationship from the live account and deployment; the latter two are
+materialized as cross-cloud relationships after all referenced assets are verified.
+Merely declaring resources from several providers in the same repository does not
+create a dependency.
+
+Use the Azure deployment as the graph root when comparing views. `All` should include
+its Azure account relationship, while `Multi-cloud` should retain only relationships
+whose verified endpoints belong to different cloud providers. Repository, file, and IaC
+nodes remain visible as relationship evidence in both views.
