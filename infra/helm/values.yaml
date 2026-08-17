@@ -1,0 +1,4 @@
+projectId: forward-dream-501807-j3
+bucket:
+  enabled: true
+  name: repello-helm-gcp-assets

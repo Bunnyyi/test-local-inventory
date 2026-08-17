@@ -12,6 +12,11 @@ credentials.
 - AWS S3 bucket access
 - Azure Blob Storage account usage
 - JavaScript AWS S3 usage
+- Java, Go, and C# cloud SDK usage across AWS, GCP, and Azure
+- AWS CDK resources in TypeScript, Python, Java, Go, and C#
+- Pulumi resources in TypeScript, Python, Go, and C#
+- CDK for Terraform resources
+- Helm-templated cloud operator resources
 - Terraform HCL and Terraform JSON declarations
 - CloudFormation YAML and JSON declarations
 - SAM YAML and JSON declarations
@@ -46,3 +51,7 @@ Use the Azure deployment as the graph root when comparing views. `All` should in
 its Azure account relationship, while `Multi-cloud` should retain only relationships
 whose verified endpoints belong to different cloud providers. Repository, file, and IaC
 nodes remain visible as relationship evidence in both views.
+
+The programmatic-IaC and compiled-language examples are intentionally static fixtures.
+They do not need to compile; repository discovery parses them without installing their
+SDKs or executing any infrastructure deployment.
